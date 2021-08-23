@@ -1,0 +1,54 @@
+#include<stdio.h>
+
+int main(){
+	int a,b,c,sum_1,sum_2,sum_3;
+	printf("Enter your first number : ");
+	scanf("%d",&a);
+	printf("Enter your second number : ");
+	scanf("%d",&b);
+	printf("Enter your third number : ");
+	scanf("%d",&c);
+	sum_1 = a+b;
+	sum_2 = b+c;
+	sum_3 = a+c;
+	if (a<b && a<c)
+	{
+		if (b<c)
+		{
+			printf("The smallest numbers are %d and %d",a,b);
+			printf("\nThe sum of these numbers is %d",sum_1);
+		}
+		else
+		{
+			printf("The smallest numbers are %d and %d",a,c);
+			printf("\nThe sum of these numbers is %d",sum_3);
+		}
+	}
+	else if (b<a && b<c)
+	{
+		if (a<c)
+		{
+			printf("The smallest numbers are %d and %d",b,a);
+			printf("\nThe sum of these numbers is %d",sum_1);
+		}
+		else
+		{
+			printf("The smallest numbers are %d and %d",b,c);
+			printf("\nThe sum of these numbers is %d",sum_2);
+		}
+	}
+	else if (c<a && c<b)
+	{
+		if (a<b)
+		{
+			printf("The smallest numbers are %d and %d",c,a);
+			printf("\nThe sum of these numbers is %d",sum_3);
+		}
+		else
+		{
+			printf("The smallest numbers are %d and %d",c,b);
+			printf("\nThe sum of these numbers is %d",sum_2);
+		}
+	}
+	return 0;
+}
